@@ -1,6 +1,7 @@
 import "../../pages/Home/homepage.css";
 import {Link} from "react-router-dom";
-import { FaStar } from "react-icons/fa";
+import { FaStar ,FaStarHalfAlt,FaSearch,FaHeart,FaShoppingCart} from "react-icons/fa";
+
 const Home =()=>{
     return(<>
      {/* <!-- navigation bar --> */}
@@ -10,7 +11,7 @@ const Home =()=>{
         </div>
         <div className="search-bar">
             <button className="search-bar-btn link-no-style">
-                <i className="fa fa-search"></i>
+               <FaSearch/>
             </button>
             <input className="search-bar-input" type="text" placeholder="Type to search"/>
         </div>
@@ -20,13 +21,13 @@ const Home =()=>{
                 <li><Link to="/pages/products.html">Products</Link></li>
                 <li>
                     <Link to="/pages/wishlist.html" className="badge-btn">
-                        <i className="fas fa-heart"></i>
+                       <FaHeart/>
                         <span className="badge-count">1</span>
                     </Link>
                 </li>
                 <li>
                     <Link to="/pages/cart.html" className="badge-btn">
-                        <i className="fas fa-shopping-cart"></i>
+                      <FaShoppingCart/>
                         <span className="badge-count">3</span>
                     </Link>
                 </li>
@@ -72,13 +73,12 @@ const Home =()=>{
             <div className="container-col-4">
                 <img src="./assets/images/products/blush5.png" alt="blush5"/>
                 <h4>Blush Brush</h4>
-                <div >
-                    {/* <i className="fa fa-solid fa-star"></i> */}
-                    <FaStar className="rating"/>
-                    {/* <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i> */}
-                    <i className="fa fas fa-star-half-alt"></i>
+                <div className="rating">
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                   <FaStarHalfAlt />
                 </div>
                 <p>$50.00</p>
             </div>
@@ -86,37 +86,37 @@ const Home =()=>{
                 <img src="./assets/images/products/pow3.png" alt="pow3"/>
                 <h4>Blush Brush</h4>
                 <div className="rating">
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fas fa-star-half-alt"></i>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                   <FaStarHalfAlt />
                 </div>
-                <p>$50.00</p>
+                <p>$100.00</p>
             </div>
             <div className="container-col-4">
                 <img src="./assets/images/products/found7.png" alt="found7"/>
                 <h4>Blush Brush</h4>
                 <div className="rating">
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fas fa-star-half-alt"></i>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                   <FaStarHalfAlt />
                 </div>
-                <p>$50.00</p>
+                <p>$150.00</p>
             </div>
             <div className="container-col-4">
                 <img src="./assets/images/products/blush4.png" alt="blush4"/>
                 <h4>Blush Brush</h4>
                 <div className="rating">
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fa-solid fa-star"></i>
-                    <i className="fa fas fa-star-half-alt"></i>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                   <FaStarHalfAlt />
                 </div>
-                <p>$50.00</p>
+                <p>$250.00</p>
             </div>
         </div>
     </div>
