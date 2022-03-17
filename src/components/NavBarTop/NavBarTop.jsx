@@ -1,8 +1,8 @@
-import "../../components/NavBarTop/navbartop.css";
+import "../../styles/main.css";
 import { Link } from "react-router-dom";
 import { FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
 
-const NavBarTop = () => {
+export const NavBarTop = () => {
     return (
         <>
             {/* <!-- navigation bar --> */}
@@ -40,4 +40,3 @@ const NavBarTop = () => {
         </>
     );
 }
-export default NavBarTop;
