@@ -1,51 +1,45 @@
-.App {
-  text-align: center;
+@import url("./index.css");
+.primary-color {
+    color: var(--primary-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.primary-bg-color {
+    background-color: var(--primary-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.light-primary-color {
+    color: var(--light-primary-color);
 }
 
-.App-header {
-  background-color: #22201c;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
+.light-primary-bg-color {
+    background-color: var(--light-primary-color);
 }
 
-.App-link {
-  color: #61dafb;
+.dark-primary-color {
+    color: var(--dark-primary-color);
 }
 
-.brand-title {
-  font-size: 3rem;
-  color: #d9d9d9;
+.dark-primary-bg-color {
+    background-color: var(--dark-primary-color);
 }
 
-.brand-title span {
-  color: #ffde59;
+.white-color {
+    color: var(--white-color);
 }
 
-.brand-description {
-  font-size: 1.4rem;
+.gray-bg-color {
+    background-color: var(--gray-color);
 }
 
-.links {
-  display: flex;
+.display-flex-col {
+    display: flex;
+    flex-direction: column;
 }
 
-.links a {
-  color: #d9d9d9;
-  font-size: 1.2rem;
-  margin: 1rem;
+.wd-100-pc {
+    width: 100%;
+}
+
+.pos-abs {
+    position: absolute;
 }
