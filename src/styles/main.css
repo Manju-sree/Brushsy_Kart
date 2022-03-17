@@ -1,0 +1,46 @@
+@import url("./home.css");
+@import url("../index.css");
+.primary-color {
+    color: var(--primary-color);
+}
+
+.primary-bg-color {
+    background-color: var(--primary-color);
+}
+
+.light-primary-color {
+    color: var(--light-primary-color);
+}
+
+.light-primary-bg-color {
+    background-color: var(--light-primary-color);
+}
+
+.dark-primary-color {
+    color: var(--dark-primary-color);
+}
+
+.dark-primary-bg-color {
+    background-color: var(--dark-primary-color);
+}
+
+.white-color {
+    color: var(--white-color);
+}
+
+.gray-bg-color {
+    background-color: var(--gray-color);
+}
+
+.display-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.wd-100-pc {
+    width: 100%;
+}
+
+.pos-abs {
+    position: absolute;
+}
