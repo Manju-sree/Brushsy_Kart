@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root {
+    --black-color: #000;
+    --dark-gray-color: #333;
+    --gray-color: #555;
+    --semilight-gray-color: #8a8a8a;
+    --light-gray-color: #b5b5b5;
+    --primarybutton-color-hover: #563434;
+    --primary-color: #ff3f6c;
+    --light-primary-color: #ff6589;
+    --dark-primary-color: #e63961;
+    --white-color: #fff;
+    --light-white-color: #f5f5f6;
+    --light-pink-color: #f7cbcb;
+    --yellow-color: rgb(250, 214, 10);
+    --cart-border-color: #e9e9eb;
+    --blue-link-color: rgb(8, 92, 248);
+    --font-family-Georgia: Georgia, 'Times New Roman', Times, serif;
+    --box-shadow-login-signup-form: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    --red-color: #CF000F;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    object-fit: cover;
+}
+
+ul {
+    list-style: none;
+}
+
+label {
+    cursor: pointer;
+}
