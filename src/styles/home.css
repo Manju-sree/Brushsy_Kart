@@ -1,3 +1,107 @@
+/* navigation icons */
+
+.logo-img {
+    width: 10rem;
+}
+
+.badge-btn {
+    background: none;
+    border: none;
+    color: var(--gray-color);
+    font-size: 1.59rem;
+    position: relative;
+}
+
+.badge-btn,
+.fa-heart {
+    color: var(--gray-color);
+}
+
+.badge-count {
+    align-items: center;
+    border: thin solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--white-color);
+    display: flex;
+    font-size: 1rem;
+    height: 1.5rem;
+    justify-content: center;
+    padding: 0.59rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(60%, -30%);
+    width: 1.5rem;
+    background: var(--primary-color);
+}
+
+
+/* search bar */
+
+.search-bar {
+    background-color: var(--light-white-color);
+    display: flex;
+    align-items: center;
+    color: var(--gray-color);
+    border-radius: 5px;
+    margin-left: 2rem;
+    width: 25rem;
+}
+
+.link-no-style,
+.search-bar-input {
+    background-color: transparent;
+    border: none;
+}
+
+.link-no-style {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+.search-bar-input {
+    padding: 0.625rem 1rem;
+    outline: 0px;
+    list-style: none;
+}
+
+
+/* navigation css */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 1.25rem;
+    background-color: var(--light-pink-color);
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    box-shadow: rgba(230, 131, 221, 0.2) 0px 7px 29px 0px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+
+a {
+    color: var(--black-color);
+}
+
 p {
     color: var(--gray-color);
 }

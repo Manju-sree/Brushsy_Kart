@@ -2,7 +2,7 @@ import "../../styles/main.css";
 import { Link } from "react-router-dom";
 import { FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
 
-export const NavBarTop = () => {
+export const NavBarTopWithLogout = () => {
     return (
         <>
             {/* <!-- navigation bar --> */}
@@ -18,7 +18,7 @@ export const NavBarTop = () => {
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><Link to="/Login">Login</Link></li>
+                        <li><Link to="/Logout">Logout</Link></li>
                         <li><Link to="/Products">Products</Link></li>
                         <li>
                             <Link to="/WishList" className="badge-btn">
