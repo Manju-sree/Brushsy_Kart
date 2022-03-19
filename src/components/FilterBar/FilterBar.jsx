@@ -15,60 +15,43 @@ export const FilterBar = () => {
                     <div className="filter-divider"></div>
                     <li className="filter-subtitle">Sort by</li>
                     <li><label for="radio-button" className="form-label">
-                        <input type="radio" name="sort" className="form-checkbox-field" value="LOW_TO_HIGH_PRICE"/>
-                            Price - Low to High
+                        <input type="radio" name="sort" className="form-checkbox-field" value="LOW_TO_HIGH_PRICE" />
+                        Price - Low to High
                     </label>
                     </li>
                     <li><label for="radio-button" className="form-label">
-                        <input type="radio" className="form-checkbox-field" name="sort" value="HIGH_TO_LOW_PRICE"/>
-                            Price - High to low
+                        <input type="radio" className="form-checkbox-field" name="sort" value="HIGH_TO_LOW_PRICE" />
+                        Price - High to low
                     </label>
                     </li>
                     <div className="filter-divider"></div>
                     <li className="filter-subtitle">Category</li>
                     <li><label className="form-label">
-                        <input type="checkbox" className="form-checkbox-field"/>
-                            Foundation-brushes
+                        <input type="checkbox" className="form-checkbox-field" />
+                        Foundation-brushes
                     </label>
                     </li>
                     <li><label className="form-label">
-                        <input type="checkbox" className="form-checkbox-field"/>
-                            Eyeliner-brushes
+                        <input type="checkbox" className="form-checkbox-field" />
+                        Eyeliner-brushes
                     </label>
                     </li>
                     <li><label className="form-label">
-                        <input type="checkbox" className="form-checkbox-field"/>
-                            Concealer-brushes
+                        <input type="checkbox" className="form-checkbox-field" />
+                        Concealer-brushes
                     </label>
                     </li>
                     <li><label className="form-label">
-                        <input type="checkbox" className="form-checkbox-field"/>
-                            Blush-brushes
+                        <input type="checkbox" className="form-checkbox-field" />
+                        Blush-brushes
                     </label>
                     </li>
                     <div className="filter-divider"></div>
                     <li className="filter-subtitle">Ratings</li>
-                    <li>
-                        <label for="radio-button" className="form-label">
-                            <input type="radio" className="form-checkbox-field" name="sort" />
-                            4 Stars & above
-                        </label>
-                    </li>
-                    <li><label for="radio-button" className="form-label">
+                    {[4, 3, 2, 1].map(num => <li><label for="radio-button" className="form-label">
                         <input type="radio" className="form-checkbox-field" name="sort" />
-                        3 Stars & above
-                    </label>
-                    </li>
-                    <li><label for="radio-button" className="form-label">
-                        <input type="radio" className="form-checkbox-field" name="sort" />
-                        2 Stars & above
-                    </label>
-                    </li>
-                    <li><label for="radio-button" className="form-label">
-                        <input type="radio" className="form-checkbox-field" name="sort" />
-                        1 Stars & above
-                    </label>
-                    </li>
+                        {num} Stars & above
+                    </label></li>)}
                 </ul>
             </div>
         </div></>)
