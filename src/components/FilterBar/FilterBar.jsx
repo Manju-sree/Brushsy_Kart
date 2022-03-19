@@ -1,5 +1,6 @@
 import "../../styles/products.css";
 export const FilterBar = () => {
+    const categories = ["Foundation-brushes", "Eyeliner-brushes", "Concealer-brushes", "Blush-brushes"]
     return (<>
 
         <div className="filter-grid-left">
@@ -26,26 +27,10 @@ export const FilterBar = () => {
                     </li>
                     <div className="filter-divider"></div>
                     <li className="filter-subtitle">Category</li>
-                    <li><label className="form-label">
+                    {categories.map(categoryName => <li><label className="form-label">
                         <input type="checkbox" className="form-checkbox-field" />
-                        Foundation-brushes
-                    </label>
-                    </li>
-                    <li><label className="form-label">
-                        <input type="checkbox" className="form-checkbox-field" />
-                        Eyeliner-brushes
-                    </label>
-                    </li>
-                    <li><label className="form-label">
-                        <input type="checkbox" className="form-checkbox-field" />
-                        Concealer-brushes
-                    </label>
-                    </li>
-                    <li><label className="form-label">
-                        <input type="checkbox" className="form-checkbox-field" />
-                        Blush-brushes
-                    </label>
-                    </li>
+                        {categoryName}
+                    </label></li>)}
                     <div className="filter-divider"></div>
                     <li className="filter-subtitle">Ratings</li>
                     {[4, 3, 2, 1].map(num => <li><label for="radio-button" className="form-label">
