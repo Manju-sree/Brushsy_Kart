@@ -1,0 +1,245 @@
+/* filter section */
+
+.filter-container {
+    display: flex;
+    width: 100%;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+.filter-grid-left {
+    margin-left: 1rem;
+    width: 20%;
+    padding: 1rem 1rem;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    font-weight: 300;
+    min-height: max-content;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.filter-space-around {
+    padding: 1rem .2rem 0;
+}
+
+.filter-titles {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.filter-btn {
+    font-size: 1rem;
+    margin: 0.625rem 0;
+    line-height: 1.5;
+    pointer-events: none;
+    font-weight: 600;
+}
+
+.clear-link-deco {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: var(--primary-color);
+    padding: 0;
+}
+
+button.clear-all-btn {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.range-color {
+    background-color: var(--primary-color);
+    border: solid 1px var( --semilight-gray-color);
+    border-radius: 8px;
+    height: 7px;
+    width: 12rem;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.filter-section {
+    padding: 0 1rem;
+    overflow-y: auto;
+    max-height: calc(80vh - 8rem);
+    font-size: 0.9rem;
+    font-weight: 300;
+    position: sticky;
+}
+
+.filter-section input {
+    margin-right: 0.5rem;
+}
+
+.filter-section::-webkit-scrollbar {
+    width: 0;
+}
+
+.filter-divider {
+    background-color: var(--gray-color);
+    width: 100%;
+    border: none;
+    height: 0.5px;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.filter-subtitle {
+    padding-bottom: .625rem;
+    font-weight: 500;
+}
+
+.form-label {
+    display: inline-block;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+.form-checkbox-field {
+    width: 1rem;
+    height: 1rem;
+    outline: none;
+    top: 0.15rem;
+}
+
+.mr-bt {
+    margin-bottom: 0.5rem;
+}
+
+
+/* products display */
+
+.filter-grid-right {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-left: 6rem;
+}
+
+
+/* card-vertical box-shadow  */
+
+.card-vertical,
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.product-title {
+    font-weight: 600;
+}
+
+.disable-font {
+    color: var(--gray-color);
+}
+
+.text-price-lighter {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.discount-txt {
+    color: var(--primary-color);
+}
+
+.btn-outline {
+    font-size: small;
+    margin-top: 0;
+    border-radius: 6px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+}
+
+.btn-on-hover:hover {
+    background-color: var(--white-color);
+}
+
+.wish-icon {
+    color: var(--gray-color);
+    font-size: 1.2rem;
+}
+
+.wish-icon:hover {
+    color: var(--primary-color);
+}
+
+.btn-disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+
+/*footer */
+
+.footer-z-index {
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+}
+
+
+/* media queries for menu */
+
+@media only screen and (max-width: 890px) {
+    nav ul {
+        position: absolute;
+        top: 4.4rem;
+        left: 0;
+        background: var( --dark-gray-color);
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin-right: 3.2rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    nav ul li a {
+        color: var(--white-color);
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .filter-grid-right {
+        padding-left: 6rem;
+        padding-right: 0rem;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .filter-grid-right {
+        padding-left: 6rem;
+        padding-right: 0rem;
+    }
+    img {
+        object-fit: cover;
+        max-inline-size: none;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .filter-grid-right,
+    .filter-grid-left {
+        flex-basis: 100%;
+    }
+    .logo-img {
+        width: 10rem;
+    }
+    img {
+        object-fit: cover;
+        max-inline-size: none;
+    }
+}
