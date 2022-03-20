@@ -8,7 +8,7 @@ export const NavBarTop = () => {
             {/* <!-- navigation bar --> */}
             <div className="navbar">
                 <div className="logo">
-                    <Link to="/Home"><img src="./assets/images/nav_icons/nav-logo.png" alt="logo" className="logo-img" /></Link>
+                    <Link to="/"><img src="./assets/images/nav_icons/nav-logo.png" alt="logo" className="logo-img" /></Link>
                 </div>
                 <div className="search-bar">
                     <button className="search-bar-btn link-no-style">
