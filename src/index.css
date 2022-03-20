@@ -49,3 +49,8 @@ ul {
 label {
     cursor: pointer;
 }
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--dark-primary-color);
+}
