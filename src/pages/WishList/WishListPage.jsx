@@ -9,7 +9,7 @@ export const WishList = () => {
   return (
     <>
       <h1 className="wishlist-title">
-        My Wishlist{" "}
+        My Wishlist
         <span className="wishlist-subtitle">({wishListCount}-items)</span>
       </h1>
       <div className="wishlist-card-container">
