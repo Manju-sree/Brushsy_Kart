@@ -27,7 +27,7 @@ export const NavBarTop = () => {
                         <li>
                             <Link to="/WishList" className="badge-btn">
                                 <FaHeart />
-                                {wishListItem.length === 0 ? (" "):(
+                                {wishListItem.length === 0 ? (null):(
                                 <span className="badge-count">{wishListCount}</span>)}
                             </Link>
                         </li>
