@@ -1,0 +1,31 @@
+.wishlist-title {
+    padding: 2rem 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.wishlist-subtitle {
+    font-weight: 300;
+}
+
+.wishlist-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10rem;
+    justify-content: center;
+}
+
+.wished-icon {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.wished-icon:hover {
+    color: var(--gray-color);
+}
+
+.space-divider {
+    width: 100%;
+    height: 3rem;
+}

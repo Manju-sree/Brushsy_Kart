@@ -1,8 +1,12 @@
 import "../../styles/main.css";
 import { Link } from "react-router-dom";
 import { FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
+import { useCartAndWishList } from "../../context/index";
 
 export const NavBarTop = () => {
+    const { cartState, wishListState } = useCartAndWishList();
+    const { cartItem, cartCount } = cartState;
+    const { wishListItem, wishListCount } = wishListState;
     return (
         <>
             {/* <!-- navigation bar --> */}
@@ -23,13 +27,15 @@ export const NavBarTop = () => {
                         <li>
                             <Link to="/WishList" className="badge-btn">
                                 <FaHeart />
-                                <span className="badge-count">1</span>
+                                {wishListItem.length === 0 ? (null):(
+                                <span className="badge-count">{wishListCount}</span>)}
                             </Link>
                         </li>
                         <li>
                             <Link to="/Cart" className="badge-btn">
                                 <FaShoppingCart />
-                                <span className="badge-count">3</span>
+                                {cartItem.length===0?(""):(
+                                <span className="badge-count">{cartCount}</span>)}
                             </Link>
                         </li>
                     </ul>
