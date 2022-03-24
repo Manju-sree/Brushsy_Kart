@@ -1,5 +1,6 @@
 import React from "react";
 import { ErrorMessage, HorizontalCard } from "../../components/index";
+import { Link } from "react-router-dom";
 import { useCartAndWishList } from "../../context/index";
 import "../../styles/cart.css";
 
@@ -11,7 +12,7 @@ export const Cart = () => {
     <>
       <h1 className="wishlist-title">My Cart</h1>
       {cartItem.length === 0 ? (
-        <Link to="/productpage">
+        <Link to="/Products">
           <ErrorMessage message={"your cart is empty"} />
         </Link>
       ) : (
