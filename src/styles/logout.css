@@ -1,0 +1,15 @@
+.logout-container {
+    padding: 2rem 1rem;
+    margin: 10rem auto;
+    height: 15rem;
+    max-width: 30rem;
+    box-shadow: var(--box-shadow-login-signup-form);
+    font-family: var(--font-family-Georgia);
+    font-weight: 200;
+}
+
+.fa-circle-check {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    padding: 0.5rem;
+}

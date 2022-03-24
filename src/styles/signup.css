@@ -1,0 +1,13 @@
+.signup-container {
+    padding: 2rem 3rem;
+    margin: 10rem auto;
+    height: 40rem;
+    max-width: 35rem;
+    box-shadow: var(--box-shadow-login-signup-form);
+    font-family: var(--font-family-Georgia);
+}
+
+.star-required-field:after {
+    content: "*";
+    color: var(--red-color);
+}
