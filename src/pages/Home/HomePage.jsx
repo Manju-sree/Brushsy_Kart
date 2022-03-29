@@ -11,7 +11,7 @@ export const Home = () => {
                     <div className="container-col-2">
                         <h1>BEAUTY ACCESSORIES</h1>
                         <p>Brushsy is a beauty store providing quality makeup brushes<br /> at reasonable cost all across India.</p>
-                        <Link to="/pages/products.html" className="btn">Shop Now</Link>
+                        <Link to="/Products" className="btn">Shop Now</Link>
                     </div>
                     <div className="container-col-2">
                         <img src="/assets/images/heroimg.png" alt="heroimage" />
@@ -34,7 +34,7 @@ export const Home = () => {
                             </div>
                             <div className="card-text-container pos-rel flex-grow display-flex-column">
                                 <div className="text-container-title">
-                                    <h6 className="product-title disable-font pos-rel ">Foundation Makeup Brushes
+                                    <h6 className="product-title disable-font pos-rel">Foundation Makeup Brushes
                                     </h6>
                                 </div>
                             </div>
