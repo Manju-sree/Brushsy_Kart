@@ -8,7 +8,6 @@ import { useCartAndWishList } from "../../context/index";
 
 export const HorizontalCard = ({ item }) => {
     const {
-        id,
         productName,
         price,
         offer,
@@ -45,7 +44,6 @@ export const HorizontalCard = ({ item }) => {
                 </div>
                 <div className="text-container-desc">
                     <span className=" text-price-lighter"> Rs.{price}
-                        <span className="text-price-strike text-price-lighter"> {price}</span>
                         <small className="discount-txt">  {offer}</small>
                     </span>
                     <pre className="rating-text">{rating}<FaStar className="rating" />|{ratingbymembers}
