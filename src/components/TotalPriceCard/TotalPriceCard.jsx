@@ -31,7 +31,7 @@ export const TotalPriceCard = ({ cartState,price,discount}) => {
             <div className="bill-details-row">
                 <div className="col-left-wd ">Discount </div>
                 <div className="col-right-wd  text-align-right primary-color">
-                    {discountedPrice}
+                ₹{discountedPrice}
                 </div>
             </div>
             <div className="bill-details-row ">
