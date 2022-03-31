@@ -5,3 +5,4 @@ export { FilterSideBar } from "./FilterSideBar/FilterSideBar";
 export {WishListCard} from "./WishListCard/WishListCard";
 export {ErrorMessage} from "./ErrorMessage/ErrorMessage";
 export {HorizontalCard} from "./HorizontalCard/HorizontalCard";
+export {TotalPriceCard} from "./TotalPriceCard/TotalPriceCard";
