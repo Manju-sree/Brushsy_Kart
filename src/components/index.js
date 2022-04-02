@@ -6,3 +6,5 @@ export {WishListCard} from "./WishListCard/WishListCard";
 export {ErrorMessage} from "./ErrorMessage/ErrorMessage";
 export {HorizontalCard} from "./HorizontalCard/HorizontalCard";
 export {TotalPriceCard} from "./TotalPriceCard/TotalPriceCard";
+export {FeaturedCard} from "./FeaturedCard/FeaturedCard";
+export {OfferCards} from "./OfferCards/OfferCards";
