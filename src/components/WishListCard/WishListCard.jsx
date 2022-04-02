@@ -39,18 +39,19 @@ export const WishListCard = ({ product }) => {
                     </h6>
                 </div>
                 <div className="text-container-desc  flex-grow display-flex-column">
-                    <span className=" text-price-lighter"> Rs.{price}
-                        <small className="discount-txt">{offer}</small>
+                    <span className=" text-price-lighter"> Rs.{price} 
+                        <small className="discount-txt"> {offer}</small>
                     </span>
                     <pre className="rating-text">{rating}<FaStar className="rating" /> |{ratingbymembers}
                     </pre>
                 </div>
                 <div className="CTA-container">
-                    <button className="btn-outline btn-on-hover wd-100-pc">
+                    <button className="btn-outline btn-on-hover wd-100-pc"
+                     onClick={() =>
+                        cartDispatch({ type: "ADD_ITEM_TO_CART", payload: product })
+                    }>
                         <Link to="/Cart" className="link-no-style"
-                            onClick={() =>
-                                cartDispatch({ type: "ADD_ITEM_TO_CART", payload: product })
-                            }>Move to Cart</Link>
+                           >Move to Cart</Link>
                     </button>
                 </div>
             </div>

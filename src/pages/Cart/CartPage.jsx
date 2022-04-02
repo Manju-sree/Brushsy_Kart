@@ -6,8 +6,7 @@ import "../../styles/cart.css";
 
 
 export const Cart = () => {
-  const { cartState, cartDispatch, wishListState, wishListDispatch } =
-    useCartAndWishList();
+  const { cartState, cartDispatch, wishListState, wishListDispatch } = useCartAndWishList();
   const { cartItem, cartCount } = cartState;
   return (
     <>
