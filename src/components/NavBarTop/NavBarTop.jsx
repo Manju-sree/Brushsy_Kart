@@ -21,9 +21,9 @@ export const NavBarTop = () => {
                     <input className="search-bar-input" type="text" placeholder="Type to search" />
                 </div>
                 <nav>
-                    <ul id="MenuItems">
-                        <li><Link to="/Login">Login</Link></li>
-                        <li><Link to="/Products">Products</Link></li>
+                    <ul>
+                        <li><Link to="/Login" className="black-color">Login</Link></li>
+                        <li><Link to="/Products" className="black-color">Shop</Link></li>
                         <li>
                             <Link to="/WishList" className="badge-btn">
                                 <FaHeart />
@@ -40,7 +40,6 @@ export const NavBarTop = () => {
                         </li>
                     </ul>
                 </nav>
-                <img src="./assets/images/nav_icons/menu.png" alt="menu" className="menu-icon" onClick="menutoggle()" />
             </div>
 
         </>
