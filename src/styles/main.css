@@ -55,6 +55,11 @@
     width: 100%;
 }
 
+.mr-t-lt {
+    margin-top: 10rem;
+    margin-left: 28rem;
+}
+
 .pos-abs {
     position: absolute;
 }
