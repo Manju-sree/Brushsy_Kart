@@ -1,9 +1,10 @@
 import '../../styles/main.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { FaStar, FaHeart } from 'react-icons/fa';
 import { useCartAndWishList } from "../../context/index";
 import "../ProductCard/ProductCard";
+
 
 export const WishListCard = ({ product }) => {
     const { wishListState, wishListDispatch, cartState, cartDispatch } = useCartAndWishList();
@@ -18,6 +19,7 @@ export const WishListCard = ({ product }) => {
         image,
         categoryName,
     } = product;
+    const navigate = useNavigate();
     return (
         <div className="card-vertical pos-rel card-container flex-items display-flex-column card-vertical-shadow">
             <button type="button" className="btn-close"
@@ -47,11 +49,11 @@ export const WishListCard = ({ product }) => {
                 </div>
                 <div className="CTA-container">
                     <button className="btn-outline btn-on-hover wd-100-pc"
-                     onClick={() =>
+                     onClick={() =>{
                         cartDispatch({ type: "ADD_ITEM_TO_CART", payload: product })
+                        navigate("/Cart");}
                     }>
-                        <Link to="/Cart" className="link-no-style"
-                           >Move to Cart</Link>
+                           Move to Cart
                     </button>
                 </div>
             </div>
