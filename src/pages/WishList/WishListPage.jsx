@@ -1,7 +1,9 @@
+import '../../styles/main.css';
 import React from "react";
 import { Link } from "react-router-dom";
 import { ErrorMessage, WishListCard } from "../../components/index";
 import { useCartAndWishList } from "../../context/index";
+
 
 export const WishList = () => {
   const { wishListState, wishListDispatch } = useCartAndWishList();
@@ -15,7 +17,8 @@ export const WishList = () => {
       <div className="wishlist-card-container">
         {wishListItem.length === 0 ? (
           <Link to="/WishList">
-            <ErrorMessage message={"No Products ☹ in WishList"} />
+            <ErrorMessage message={"Your wishlist ❤ is currently empty"} />
+            <Link to="/Products" className="btn mr-t-lt">Shop Now</Link>
           </Link>
         ) : (
           wishListItem.map((product) => {

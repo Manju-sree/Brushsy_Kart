@@ -5,6 +5,7 @@ import { useCartAndWishList } from "../../context/index";
 import "../../styles/cart.css";
 
 
+
 export const Cart = () => {
   const { cartState, cartDispatch, wishListState, wishListDispatch } = useCartAndWishList();
   const { cartItem, cartCount } = cartState;
@@ -12,8 +13,9 @@ export const Cart = () => {
     <>
       <h1 className="wishlist-title">My Cart</h1>
       {cartItem.length === 0 ? (
-        <Link to="/Products">
-          <ErrorMessage message={"your cart is empty"} />
+        <Link to="#">
+          <ErrorMessage message={"Your Cart is Empty"} />
+          <img src="/assets/images/shop_cart.jpg" alt="empty-cart-image" className="img-responsive cart-img"/>
         </Link>
       ) : (
         <div className="wishlist-card-container">
