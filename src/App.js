@@ -1,5 +1,5 @@
 import {Home,Products,Cart,WishList,SignUp,Login,Logout} from "./pages/index";
-import { NavBarTop } from "./components";
+import { NavBarTop,Error404 } from "./components";
 import MockMan from "mockman-js";
 import{Routes, Route} from "react-router-dom";
 
@@ -15,6 +15,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Login" element={<Login/>} />
         <Route path="/Logout" element={<Logout/>} />
+        <Route path="*" element={<Error404 />} />
         <Route path="/mockman" element={<MockMan />} />
       </Routes>      
     </div>
