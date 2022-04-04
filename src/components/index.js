@@ -9,3 +9,4 @@ export {TotalPriceCard} from "./TotalPriceCard/TotalPriceCard";
 export {FeaturedCard} from "./FeaturedCard/FeaturedCard";
 export {OfferCards} from "./OfferCards/OfferCards";
 export {Error404} from "./Error404/Error404";
+export {Brands} from "./Brands/Brands";

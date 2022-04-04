@@ -104,7 +104,7 @@ export const FilterSideBar = () => {
                   <input
                     type="checkbox"
                     className="form-checkbox-field"
-                    checked = {state.category[categoryName]}
+                    checked = {state.category[categoryName]===true}
                     onChange={() =>
                       dispatch({
                         type: "FILTER_CATEGORY",
