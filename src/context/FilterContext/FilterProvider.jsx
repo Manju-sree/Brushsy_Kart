@@ -9,8 +9,6 @@ const FilterProvider = ({ children }) => {
     const [productList, setProductList] = useState([]);
     const [state, dispatch] = useReducer(filterReducerFunc, initialValues);
     
-  
-console.log(state);
     useEffect(() => {
         (async () => {
             try {
@@ -28,8 +26,6 @@ console.log(state);
         filterRating,
         filterPrice
       )(productList);
-    
-    console.log(filterProducts);
     return (
         <FilterContext.Provider value={{ state, dispatch,productList:filterProducts}}>
             {children}
