@@ -38,6 +38,14 @@
     background-color: var(--gray-color);
 }
 
+.black-color {
+    color: var(--black-color);
+}
+
+.gray-color {
+    color: var(--gray-color);
+}
+
 .display-flex-col {
     display: flex;
     flex-direction: column;
@@ -45,6 +53,11 @@
 
 .wd-100-pc {
     width: 100%;
+}
+
+.mr-t-lt {
+    margin-top: 10rem;
+    margin-left: 28rem;
 }
 
 .pos-abs {

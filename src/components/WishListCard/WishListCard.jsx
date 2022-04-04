@@ -1,9 +1,10 @@
 import '../../styles/main.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { FaStar, FaHeart } from 'react-icons/fa';
 import { useCartAndWishList } from "../../context/index";
 import "../ProductCard/ProductCard";
+
 
 export const WishListCard = ({ product }) => {
     const { wishListState, wishListDispatch, cartState, cartDispatch } = useCartAndWishList();
@@ -18,6 +19,7 @@ export const WishListCard = ({ product }) => {
         image,
         categoryName,
     } = product;
+    const navigate = useNavigate();
     return (
         <div className="card-vertical pos-rel card-container flex-items display-flex-column card-vertical-shadow">
             <button type="button" className="btn-close"
@@ -39,18 +41,19 @@ export const WishListCard = ({ product }) => {
                     </h6>
                 </div>
                 <div className="text-container-desc  flex-grow display-flex-column">
-                    <span className=" text-price-lighter"> Rs.{price}
-                        <small className="discount-txt">{offer}</small>
+                    <span className=" text-price-lighter"> Rs.{price} 
+                        <small className="discount-txt"> {offer}</small>
                     </span>
                     <pre className="rating-text">{rating}<FaStar className="rating" /> |{ratingbymembers}
                     </pre>
                 </div>
                 <div className="CTA-container">
-                    <button className="btn-outline btn-on-hover wd-100-pc">
-                        <Link to="/Cart" className="link-no-style"
-                            onClick={() =>
-                                cartDispatch({ type: "ADD_ITEM_TO_CART", payload: product })
-                            }>Move to Cart</Link>
+                    <button className="btn-outline btn-on-hover wd-100-pc"
+                     onClick={() =>{
+                        cartDispatch({ type: "ADD_ITEM_TO_CART", payload: product })
+                        navigate("/Cart");}
+                    }>
+                           Move to Cart
                     </button>
                 </div>
             </div>

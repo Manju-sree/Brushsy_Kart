@@ -2,7 +2,7 @@ import '../../styles/main.css';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {FaStar, FaHeart} from 'react-icons/fa';
-import { useCartAndWishList } from '../../context/index';
+import {useCartAndWishList} from '../../context/index';
 export const ProductCard = ({product}) => {
   const {
     id,
@@ -18,10 +18,15 @@ export const ProductCard = ({product}) => {
     image,
     categoryName,
   } = product;
-  const { cartState, cartDispatch, wishListState, wishListDispatch } = useCartAndWishList();
+  const {
+    cartState,
+    cartDispatch,
+    wishListState,
+    wishListDispatch,
+  } = useCartAndWishList ();
 
-const { cartItem, cartCount } = cartState;
-const { wishListItem, wishListCount } = wishListState;
+  const {cartItem, cartCount} = cartState;
+  const {wishListItem, wishListCount} = wishListState;
   return (
     <div className="card-vertical pos-rel card-container flex-items display-flex-column card-vertical-shadow">
       <div className="image-container badge-container pos-rel ">
@@ -47,20 +52,22 @@ const { wishListItem, wishListCount } = wishListState;
           >
             {productName}
             <button className="like-btn link-no-style">
-            {wishListItem.some((item) => item._id === product._id) ? (
-              <span>
-                <Link to="/wishList">
-                <FaHeart className="wished-icon" />
-                </Link>
-              </span>):( <span>
-                <FaHeart className="wish-icon"
-                 onClick={() =>
-                  wishListDispatch({
-                    type: "ADD_ITEM_TO_WISHLIST",
-                    payload: product,
-                  })
-                } />
-              </span>)}
+              {wishListItem.some (item => item._id === product._id)
+                ? <span>
+                    <Link to="/wishList">
+                      <FaHeart className="wished-icon" />
+                    </Link>
+                  </span>
+                : <span>
+                    <FaHeart
+                      className="wish-icon"
+                      onClick={() =>
+                        wishListDispatch ({
+                          type: 'ADD_ITEM_TO_WISHLIST',
+                          payload: product,
+                        })}
+                    />
+                  </span>}
             </button>
           </h6>
         </div>
@@ -77,29 +84,35 @@ const { wishListItem, wishListCount } = wishListState;
         </div>
         <div className="CTA-container">
           {!inStock
-            ? <button className="btn-outline btn-disabled  wd-100-pc mr-bt ">
+            ? <button className="btn-outline btn-disabled wd-100-pc mr-bt">
                 <Link to="#" className="link-no-style">
                   Out of Stock
                 </Link>
               </button>
-            : <button className="btn-outline btn-on-hover wd-100-pc mr-bt "
-            onClick={() =>
-              cartDispatch({
-                type: "ADD_ITEM_TO_CART",
-                payload: product,
-              })
-            }>
-               {cartItem.some((item) => item._id === product._id) ? (
-             <Link to="/Cart" className="link-no-style">
-             Go to Cart
-           </Link>
-          ) : (
-                <Link to="#" className="link-no-style">
-                  Add to Cart
-                </Link>)}   
-              </button>}
+            : <div>
+                {cartItem.some (item => item._id === product._id)
+                  ? 
+                  
+                    <button className="btn-outline btn-on-hover wd-100-pc mr-bt">
+                        <Link to="/Cart" className="link-no-style">
+                      Go to Cart
+                      </Link>
+                      </button>
+                    
+                  : <button
+                      className="btn-outline btn-on-hover wd-100-pc mr-bt"
+                      onClick={() =>
+                        cartDispatch ({
+                          type: 'ADD_ITEM_TO_CART',
+                          payload: product,
+                        })}
+                    >
+                      Add to Cart
+                    </button>}
+              </div>}
         </div>
       </div>
     </div>
   );
 };
+

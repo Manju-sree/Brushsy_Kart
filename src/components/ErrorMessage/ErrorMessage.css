@@ -1,6 +1,7 @@
 .error-msg {
     font-size: 3rem;
     text-align: center;
-    width: 60rem;
+    width: 70rem;
+    font-family: 'Times New Roman', Times, serif;
     color: var(--primary-color);
 }

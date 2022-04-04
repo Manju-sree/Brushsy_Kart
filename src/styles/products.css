@@ -184,34 +184,6 @@ button.clear-all-btn {
     bottom: 0;
 }
 
-
-/* media queries for menu */
-
-@media only screen and (max-width: 890px) {
-    nav ul {
-        position: absolute;
-        top: 4.4rem;
-        left: 0;
-        background: var( --dark-gray-color);
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-    }
-    nav ul li {
-        display: block;
-        margin-right: 3.2rem;
-        margin-top: 1.2rem;
-        margin-bottom: 1.2rem;
-    }
-    nav ul li a {
-        color: var(--white-color);
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-}
-
 @media only screen and (max-width: 730px) {
     .filter-grid-right {
         padding-left: 6rem;

@@ -98,14 +98,6 @@ nav ul li {
     margin-right: 1.25rem;
 }
 
-a {
-    color: var(--black-color);
-}
-
-p {
-    color: var(--gray-color);
-}
-
 .container {
     max-width: 81.25rem;
     margin: auto;
@@ -317,41 +309,7 @@ ul {
 }
 
 
-/* menu in navigation */
-
-.menu-icon {
-    width: 1.75rem;
-    margin-left: 1.25rem;
-    display: none;
-}
-
-
 /* media queries for menu */
-
-@media only screen and (max-width: 800px) {
-    nav ul {
-        position: absolute;
-        top: 4.4rem;
-        left: 0;
-        background: var( --dark-gray-color);
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-    }
-    nav ul li {
-        display: block;
-        margin-right: 3.2rem;
-        margin-top: 1.2rem;
-        margin-bottom: 1.2rem;
-    }
-    nav ul li a {
-        color: var(--white-color);
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-}
 
 
 /* media queries for less than 600 screen  size */
@@ -365,10 +323,6 @@ ul {
     .container-col-4 {
         flex-basis: 100%;
     }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
 }
 
 @media only screen and (max-width: 412px) {
@@ -380,15 +334,6 @@ ul {
     .container-col-3,
     .container-col-4 {
         flex-basis: 100%;
-    }
-    #MenuItems {
-        display: block;
-        margin-top: 3rem;
-        margin-left: 1rem;
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
     }
     .logo {
         width: 22rem;
@@ -412,15 +357,6 @@ ul {
     .container-col-4 {
         flex-basis: 100%;
     }
-    #MenuItems {
-        display: block;
-        margin-top: 3rem;
-        margin-left: 1rem;
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
     .logo {
         width: 22rem;
     }
@@ -443,15 +379,6 @@ ul {
     .container-col-3,
     .container-col-4 {
         flex-basis: 100%;
-    }
-    #MenuItems {
-        display: block;
-        margin-top: 4rem;
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-        margin-left: 18rem;
     }
     .logo {
         width: 22rem;
@@ -483,15 +410,6 @@ ul {
     .container-col-2 img {
         max-width: 70%;
         padding: 0rem;
-    }
-    #MenuItems {
-        display: block;
-        margin-top: 4rem;
-    }
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-        margin-left: 10rem;
     }
     .search-bar {
         width: 20rem;
