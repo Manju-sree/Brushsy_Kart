@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="Brushsy-kart logo" src="./assets/images/nav_icons/nav-logo.png" width="10rem" />
+![Brushsy-kart-logo gif](/public/assets/images/nav_icons/nav-logo.png)
 
 # BRUSHSY KART
 
@@ -61,7 +61,7 @@ Have a look at the Website.
 ![Brushsy-kart gif](/public/assets/gifs/Brushsy_kart_demo.gif)
 
 ## **Live Project Link**
-Here you go [Brushsy-kart](https://brushsy-kart.netlify.app)
+[Brushsy-kart-app](https://brushsy-kart.netlify.app)
 
 
 ## E-Commerce Backend
