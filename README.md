@@ -34,16 +34,15 @@ $ npm start
 
 ## **Features It has-**
 
-- Home page
+- Home page - Landing page with featured categories
 - Product listing page
 - Filter and sort products
-- Cart Managment
-- Wishlist managment
+- Wishlist Management (Add / remove from the wishlist, move items to cart)
+- Cart Management (Add to cart, +/- items in cart, remove from cart, move to wishlist from cart)
 - Authentication:
-  - Signup
-  - Login
+  - Signup - create your own account by filling up signUp form.
+  - Login - Login-As-Guest or Login with your own cerdentials which provided on signUp form.
   - Logout
-
 
 ## **Built with -**
 
