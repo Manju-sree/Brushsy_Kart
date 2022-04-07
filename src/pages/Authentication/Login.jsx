@@ -7,6 +7,7 @@ import {
 } from "../../constants/index";
 import { useAuthentication } from "../../context/index";
 import { LoginActionHandler } from "../../services/index";
+import {NavBarBottom,NavBarTop} from "../../components/index";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -17,6 +18,8 @@ export const Login = () => {
     setLoginData((prevLoginData) => ({ ...prevLoginData, [name]: value }));
   };
   return (
+    <>
+      <NavBarTop/>
     <div className="login-container wd-100-pc pos-rel flex-grow display-flex-column">
       <h1 className="auth-form-title">Login</h1>
       <form
@@ -105,5 +108,8 @@ export const Login = () => {
         </ul>
       </form>
     </div>
+     <div className="space-divider"></div>
+     <NavBarBottom/>
+     </>
   );
 };

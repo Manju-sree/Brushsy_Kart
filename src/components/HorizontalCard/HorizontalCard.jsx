@@ -1,6 +1,5 @@
 import '../../styles/main.css';
 import React from "react";
-import { Link } from 'react-router-dom';
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { FaStar, FaTrashAlt } from "react-icons/fa";
 import { useCartAndWishList } from "../../context/index";
@@ -16,7 +15,7 @@ export const HorizontalCard = ({ item }) => {
         image,
         qty,
     } = item;
-    const { cartState, cartDispatch, wishListState, wishListDispatch } = useCartAndWishList();
+    const { cartDispatch, wishListState, wishListDispatch } = useCartAndWishList();
     const { wishListItem } = wishListState;
 
     //Add item to wishlist from cart and removing that item from cart.

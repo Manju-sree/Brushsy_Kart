@@ -1,5 +1,5 @@
 import {Home,Products,Cart,WishList,SignUp,Login,Logout} from "./pages/index";
-import { NavBarTop,Error404 } from "./components";
+import {Error404} from "./components";
 import MockMan from "mockman-js";
 import{Routes, Route} from "react-router-dom";
 import { ProtectedRoutes } from "./routes/ProtectedRoutes";
@@ -7,7 +7,6 @@ import { ProtectedRoutes } from "./routes/ProtectedRoutes";
 function App() {
   return (
     <div className="App">
-      <NavBarTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Products" element={<Products />} />

@@ -175,15 +175,6 @@ button.clear-all-btn {
     opacity: 0.7;
 }
 
-
-/*footer */
-
-.footer-z-index {
-    position: relative;
-    z-index: 1;
-    bottom: 0;
-}
-
 @media only screen and (max-width: 730px) {
     .filter-grid-right {
         padding-left: 6rem;

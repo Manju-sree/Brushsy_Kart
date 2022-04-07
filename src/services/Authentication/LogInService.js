@@ -8,7 +8,7 @@ export const LoginActionHandler = (e,logInDataProvided,authDispatch,navigateToPa
         authDispatch({ type: "LOG-IN", payload: data });
        
         localStorage.setItem("authenticationToken", data.encodedToken);
-        navigateToPath("/Products");
+        navigateToPath("/");
       }
     } catch {
       console.error("LOGIN FAILED");

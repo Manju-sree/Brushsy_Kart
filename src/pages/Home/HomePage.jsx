@@ -1,10 +1,11 @@
 import "../../styles/main.css";
 import { Link } from "react-router-dom";
-import { FeaturedCard ,OfferCards,Brands} from "../../components/index";
+import { FeaturedCard ,OfferCards,Brands,NavBarTop,NavBarBottom} from "../../components/index";
 
 export const Home = () => {
     return (<>
         {/* <!-- header container --> */}
+        <NavBarTop/>
         <div className="header">
             <div className="container">
                 <div className="row-container">
@@ -22,5 +23,6 @@ export const Home = () => {
         <OfferCards/>
         <FeaturedCard/>
         <Brands/>  
+        <NavBarBottom/>
     </>);
 }

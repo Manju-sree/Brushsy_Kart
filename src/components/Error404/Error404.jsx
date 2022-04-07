@@ -4,7 +4,7 @@ export function Error404() {
   return (
     <main className="mr-t-lt">
       <figure>
-        <img src="/assets/images/Error-404/404_page_pic.png" alt="Error" width="250" height="350" />
+        <img src="/assets/images/Error-404/404_page_pic.png" alt="Error-404" width="250" height="350" />
       </figure>
       <p>
        The Page you are looking for is not found.

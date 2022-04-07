@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuthentication } from "../../context/index";
 import { signUpActionHandler } from "../../services/index";
 import { initialSignUpData } from "../../constants/index";
+import {NavBarBottom,NavBarTop} from "../../components/index";
 
 export const SignUp = () => {
   const navigate = useNavigate();
@@ -14,6 +15,8 @@ export const SignUp = () => {
     setSignUpData((prevSignUpData) => ({ ...prevSignUpData, [name]: value }));
   };
   return (
+    <>
+      <NavBarTop/>
     <div className="signup-container wd-100-pc pos-rel flex-grow display-flex-column">
       <h1 className="auth-form-title">SignUp</h1>
       <form
@@ -133,5 +136,8 @@ export const SignUp = () => {
         </ul>
       </form>
     </div>
+    <div className="space-divider"></div>
+    <NavBarBottom/>
+    </>
   );
 };

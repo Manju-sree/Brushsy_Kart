@@ -1,8 +1,11 @@
 import "../../styles/logout.css";
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import {NavBarBottom,NavBarTop} from "../../components/index";
+
 export const Logout = () => {
-  return (
+  return (<>
+    <NavBarTop/>
     <div className="logout-container wd-100-pc pos-rel flex-grow display-flex-column logout-icon txt-cnt">
       <h2 className="auth-form-title">
         {" "}
@@ -18,7 +21,10 @@ export const Logout = () => {
         <Link to="/" className="new-acc-style dark-primary-color ">
           Go to Home
         </Link>
-      </div>
+      </div>  
     </div>
+    <div className="space-divider"></div>
+    <NavBarBottom/>
+    </>
   );
 };

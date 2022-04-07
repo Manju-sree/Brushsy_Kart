@@ -1,4 +1,4 @@
-import { FilterSideBar, ProductCard} from "../../components/index";
+import { FilterSideBar, ProductCard,NavBarTop} from "../../components/index";
 import { useFilter } from "../../context/FilterContext/FilterProvider";
 
 export const Products = () => {
@@ -6,7 +6,8 @@ export const Products = () => {
   const {productList} = useFilter();
   return (
     <>
-      <div class="filter-container">
+      <NavBarTop/>
+      <div className="filter-container">
         <FilterSideBar />
         <div className="filter-grid-right">
         {productList.map((prod)=><ProductCard key={prod._id} product={prod}/>)}

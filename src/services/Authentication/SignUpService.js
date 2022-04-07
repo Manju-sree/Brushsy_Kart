@@ -7,7 +7,7 @@ export const signUpActionHandler = (e, signUpDataProvided, authDispatch, navigat
             if (status === 201) {
                 authDispatch({ type: "SIGN-UP", payload: data })
                 localStorage.setItem("authenticationToken", data.encodedToken);
-                navigateToPath("/Products")
+                navigateToPath("/Login")
             }
         } catch {
             console.error("SIGN UP FAILED");

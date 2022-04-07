@@ -1,15 +1,16 @@
 import '../../styles/main.css';
 import React from "react";
 import { Link } from "react-router-dom";
-import { ErrorMessage, WishListCard } from "../../components/index";
+import { ErrorMessage, WishListCard ,NavBarTop} from "../../components/index";
 import { useCartAndWishList } from "../../context/index";
 
 
 export const WishList = () => {
-  const { wishListState, wishListDispatch } = useCartAndWishList();
+  const { wishListState } = useCartAndWishList();
   const { wishListItem, wishListCount } = wishListState;
   return (
     <>
+      <NavBarTop/>
       <h1 className="wishlist-title">
         My Wishlist
         <span className="wishlist-subtitle">({wishListCount}-items)</span>
