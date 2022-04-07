@@ -1,12 +1,23 @@
-import "../../styles/main.css";
-import { Link } from "react-router-dom";
+import "../../styles/home.css";
+import { Link,NavLink,useNavigate } from "react-router-dom";
 import { FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
-import { useCartAndWishList } from "../../context/index";
+import { useCartAndWishList,useAuthentication } from "../../context/index";
+import { LogoutActionHandler } from "../../services/index";
 
 export const NavBarTop = () => {
     const { cartState, wishListState } = useCartAndWishList();
     const { cartItem, cartCount } = cartState;
     const { wishListItem, wishListCount } = wishListState;
+
+    const navigate = useNavigate();
+    const { authState, authDispatch } = useAuthentication();
+    const { loginStatus } = authState;
+    const activeNavLinkStyles = ({ isActive }) => {
+        return {
+          color: isActive ? "#e63961" : "#555",
+        };
+      };
+      
     return (
         <>
             {/* <!-- navigation bar --> */}
@@ -22,21 +33,24 @@ export const NavBarTop = () => {
                 </div>
                 <nav>
                     <ul>
-                        <li><Link to="/Login" className="black-color">Login</Link></li>
-                        <li><Link to="/Products" className="black-color">Shop</Link></li>
+                    {loginStatus ?<li onClick={() => { LogoutActionHandler(authDispatch, navigate) }}>
+                        <NavLink to="/Login" style={activeNavLinkStyles}>Logout</NavLink>
+                        </li>:
+                        <li><NavLink to="/Login" style={activeNavLinkStyles}>Login</NavLink></li>}
+                        <li><NavLink to="/Products" style={activeNavLinkStyles}>Shop</NavLink></li>
                         <li>
-                            <Link to="/WishList" className="badge-btn">
+                            <NavLink to="/WishList" style={activeNavLinkStyles} className="badge-btn">
                                 <FaHeart />
                                 {wishListItem.length === 0 ? (null):(
                                 <span className="badge-count">{wishListCount}</span>)}
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/Cart" className="badge-btn">
+                            <NavLink to="/Cart" style={activeNavLinkStyles}className="badge-btn">
                                 <FaShoppingCart />
                                 {cartItem.length===0?(""):(
                                 <span className="badge-count">{cartCount}</span>)}
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>

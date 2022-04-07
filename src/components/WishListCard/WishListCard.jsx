@@ -7,10 +7,8 @@ import "../ProductCard/ProductCard";
 
 
 export const WishListCard = ({ product }) => {
-    const { wishListState, wishListDispatch, cartState, cartDispatch } = useCartAndWishList();
-    const { wishListItem } = wishListState;
+    const {wishListDispatch,cartDispatch } = useCartAndWishList();
     const {
-        id,
         productName,
         price,
         offer,

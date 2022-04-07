@@ -1,0 +1,1 @@
+export {initialLogInData,initialSignUpData,loginAsGuestCredentials} from "./Authentication/AuthConstants";

@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 export const NavBarBottom = () => {
     return (
-        <>
-        {/* <!-- footer --> */}
     <div className="footer">
         <div className="container">
             <div className="row-container">
@@ -20,7 +18,7 @@ export const NavBarBottom = () => {
                 <div className="footer-col-2">
                     <h3>Quick links</h3>
                     <ul className="quick-links">
-                        <li><Link to="/Home" className="link">Home</Link></li>
+                        <li><Link to="/" className="link">Home</Link></li>
                         <li><Link to="/Products" className="link">Products</Link></li>
                         <li><Link to="/Cart" className="link">My Cart</Link></li>
                         <li><Link to="/WishList" className="link">My Wishlist</Link></li>
@@ -32,6 +30,5 @@ export const NavBarBottom = () => {
                 <span className="white-color">&lt;/&gt;</span> by Manjushree</p>
         </div>
     </div> 
-        </>
     );
 }

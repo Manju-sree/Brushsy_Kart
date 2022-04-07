@@ -1,5 +1,5 @@
 import React from "react";
-import { ErrorMessage, HorizontalCard,TotalPriceCard } from "../../components/index";
+import { ErrorMessage, HorizontalCard,TotalPriceCard ,NavBarTop} from "../../components/index";
 import { Link } from "react-router-dom";
 import { useCartAndWishList } from "../../context/index";
 import "../../styles/cart.css";
@@ -7,10 +7,11 @@ import "../../styles/cart.css";
 
 
 export const Cart = () => {
-  const { cartState, cartDispatch, wishListState, wishListDispatch } = useCartAndWishList();
-  const { cartItem, cartCount } = cartState;
+  const { cartState} = useCartAndWishList();
+  const { cartItem } = cartState;
   return (
     <>
+      <NavBarTop/>
       <h1 className="wishlist-title">My Cart</h1>
       {cartItem.length === 0 ? (
         <Link to="#">

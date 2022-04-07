@@ -5,18 +5,15 @@ import {FaStar, FaHeart} from 'react-icons/fa';
 import {useCartAndWishList} from '../../context/index';
 export const ProductCard = ({product}) => {
   const {
-    id,
     productName,
     price,
     offer,
     rating,
     inStock,
-    fastDelivery,
     ratingbymembers,
     isOffer,
     isArrivedNew,
     image,
-    categoryName,
   } = product;
   const {
     cartState,
@@ -25,11 +22,11 @@ export const ProductCard = ({product}) => {
     wishListDispatch,
   } = useCartAndWishList ();
 
-  const {cartItem, cartCount} = cartState;
-  const {wishListItem, wishListCount} = wishListState;
+  const {cartItem} = cartState;
+  const {wishListItem} = wishListState;
   return (
     <div className="card-vertical pos-rel card-container flex-items display-flex-column card-vertical-shadow">
-      <div className="image-container badge-container pos-rel ">
+      <div className="image-container badge-container pos-rel">
         <img
           src={image}
           alt="product-image"
